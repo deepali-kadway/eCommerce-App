@@ -1,2 +1,12 @@
-export class Product {
-}
+// export class Product {
+
+// }
+
+export interface Product{
+        id: number;
+        name: string;
+        price: number;
+        description: string;
+        imageUrl: string;
+        category?: string;
+ }

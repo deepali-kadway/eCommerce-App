@@ -1,1 +1,17 @@
-<p>product-detail works!</p>
+<div class="container mt-5 pt-5" *ngIf="product">
+  <div class="row">
+    <div class="col-md-6">
+      <img [src]="product?.imageUrl" [alt]="product?.name" class="img-fluid rounded">
+    </div>
+    <div class="col-md-6">
+      <h1>{{ product?.name }}</h1>
+      <p class="lead">{{ product?.description }}</p>
+      <h3 class="text-primary">${{ product?.price }}</h3>
+      
+      <div class="mt-4">
+        <button class="btn btn-primary btn-lg me-3">Buy Now</button>
+        <button class="btn btn-outline-secondary" (click)="goBack()">Back to Products</button>
+      </div>
+    </div>
+  </div>
+</div>
