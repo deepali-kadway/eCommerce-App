@@ -4,11 +4,12 @@
   
   <!-- Product Cards Section -->
   <div class="cards-container">
-    <!-- Dynamic Cards using *ngFor -->
+    <!-- Dynamic Cards using *ngFor to iterate over products in the array -->
     <div class="card" *ngFor="let product of products" (click)="viewproduct(product.id)" style="cursor: pointer;">
+      <!-- using property binding. [property] = "expression"; eg: [src] = "product.imageUrl"-->
       <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name" />
       <div class="card-body">
-        <h5 class="card-title">{{ product.name }}</h5>
+        <h5 class="card-title">{{ product.name }}</h5> <!-- string interpolation -->
         <p class="card-price">${{ product.price }}</p>
         <button class="btn btn-primary btn-add-to-cart" (click)="addToCart(product.id, $event)">Add to Cart</button>
       </div>

@@ -16,7 +16,7 @@ export class ProductService {
     return this.products;
   }
 
-  // Defining Method to get product by ID
+  // Defining Method to get product by ID. returns undefined if not found, or the product object if found
   getProductById(id: number): Product | undefined {
     return this.products.find(product => product.id === id);
   }
