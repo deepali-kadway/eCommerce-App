@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product';
 import { Product } from '../../models/product.model';
+import { Navbar } from '../navbar/navbar';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-product-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, Navbar, Footer],
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.css'
 })
